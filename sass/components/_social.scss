@@ -1,0 +1,30 @@
+.team-item-social {
+  display: flex;
+  justify-content: center;
+}
+
+.social-item:not(:first-child) {
+  margin-left: 10px;
+}
+.social-link {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-white);
+  color: var(--team-soc-link);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: color, background-color;
+  transition-duration: var(--time-function);
+  transition-timing-function: var(--cubic);
+  &:hover,
+  &:focus {
+    background-color: var(--social-link-hover);
+    color: var(--color-white);
+  }
+}
+
+.team-soc-link {
+  fill: currentColor;
+}

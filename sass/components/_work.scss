@@ -1,0 +1,45 @@
+.work {
+  display: none;
+
+  @include desktop {
+    display: contents;
+    padding-top: 0;
+  }
+}
+.work__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+  margin-bottom: 50px;
+  @include desktop {
+    font-size: 36px;
+  }
+}
+.work__list {
+  display: flex;
+  gap: var(--card-set-gap);
+}
+
+.work__name {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 27px 10px;
+  color: var(--color-white);
+}
+.work__wrap {
+  position: relative;
+}

@@ -1,0 +1,106 @@
+.hero {
+  background-color: var(--hero-bg);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero-mob.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @include retina {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero-mob2x.jpg");
+  }
+  @include tablet {
+    min-width: 768px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero-tablet.jpg");
+    @include retina {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero-tablet-2x.jpg");
+    }
+  }
+  @include desktop {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero.jpg);
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    @include retina {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/herox2x.jpg");
+    }
+  }
+}
+
+.hero__title {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  max-width: 360px;
+  margin: 0 auto;
+  margin-bottom: var(--card-set-gap);
+  @include desktop {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+.hero__button {
+  font-family: inherit;
+  background: var(--color-blue);
+  box-shadow: 0px 4px 4px var(--btn-shadow);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--color-white);
+  cursor: pointer;
+  border-color: transparent;
+  padding: 10px 24px;
+  margin: 0 auto;
+  transition-property: background-color;
+  transition-duration: var(--time-function);
+  transition-timing-function: var(--cubic);
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover);
+    box-shadow: 0px 4px 4px var(--btn-shadow-f);
+    border-radius: 4px;
+  }
+  @include desktop {
+    padding: 10px 32px;
+  }
+}
